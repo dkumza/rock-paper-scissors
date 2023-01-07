@@ -1,61 +1,65 @@
 let computerScore = 0;
 let playerScore = 0;
 let computerChoice;
-let playerChoice;
-let playValues = ["rock", "paper", "scissors"];
-
-// "PLAYER" ENTERS RANDOM(rock, paper or scissors) VALUE TO START GAME
-function getPlayerChoice() {
-    playerChoice = prompt("Enter value: Rock, Paper or Scissors to sart game: ");
-    return playerChoice = (playerChoice.toLowerCase());
-    console.log(playerChoice);
-};
+let round = 0;
+let playValues = ['rock', 'paper', 'scissors'];
+const btn = document.querySelectorAll('button');
+const r_Score = document.querySelector('#round-no');
+const p_Score = document.querySelector('#player-sc2');
+const c_Score = document.querySelector('#computer-sc2');
+const r_content = document.querySelector('#win');
+const toogle_cont = document.querySelector('#toogle-cont');
+const rr_game = document.querySelector('#rr-game');
+const para1 = document.createElement('p1');
+const rr_btn = document.createElement('button');
 
 // RANDOM VALUE OF "COMPUTER" TO START GAME
 function getComputerChoice() {
-    return computerChoice = (playValues[Math.floor(Math.random() * playValues.length)]);
-};
-
-function game() {
-    for (let i = 0; i < 5; i++) {
-        getPlayerChoice();
-        computerChoice = getComputerChoice();
-        playRound(playerChoice, computerChoice);
-        // console.log(playerChoice);
-        // console.log(computerChoice);
-    }
+  return (computerChoice =
+    playValues[Math.floor(Math.random() * playValues.length)]);
 }
 
-game();
-
-// PLAY ROUND
-
-// player == pc = draw;
-// rock vs paper = paper;
-// rock vs scissors = rock;
-// paper vs scissors = scissors;
+btn.forEach((button) => {
+  button.addEventListener('click', () => {
+    let playerChoice = button.id;
+    getComputerChoice();
+    playRound(playerChoice, computerChoice);
+  });
+});
 
 function playRound(playerChoice, computerChoice) {
-    if (playerChoice == computerChoice) {
-        console.log('draw');
-    } else if (playerChoice == 'rock' && computerChoice == 'scissors') {
-        console.log('rock beats scissors!')
-        playerScore += 1;
-        console.log("player score: ", playerScore);
-    } else if (playerChoice == 'paper' && computerChoice == 'rock') {
-        console.log('paper beats rock!');
-        playerScore += 1;
-        console.log("player score:", playerScore);
-    } else {
-        console.log(`${computerChoice} beats ${playerChoice}`);
-        computerScore += 1;
-        console.log('computer score: ', computerScore);
-    }
+  round++;
+  r_Score.innerHTML = round;
+  if (playerChoice == computerChoice) {
+  } else if (playerChoice == 'rock' && computerChoice == 'scissors') {
+    playerScore += 1;
+    p_Score.innerHTML = playerScore;
+  } else if (playerChoice == 'paper' && computerChoice == 'rock') {
+    playerScore += 1;
+    p_Score.innerHTML = playerScore;
+  } else {
+    computerScore += 1;
+    c_Score.innerHTML = computerScore;
+  }
 
+  if (playerScore == 5) {
+    toogle_cont.style.display = 'none';
+    // creates <p> with message with greatings
+    para1.textContent = 'YOU WIN!';
+    r_content.appendChild(para1);
+    rr_button();
+  } else if (computerScore == 5) {
+    toogle_cont.style.display = 'none';
+    // creates <p> with message with greatings
+    para1.textContent = 'COMPUTER WINS!';
+    r_content.appendChild(para1);
+    rr_button();
+  }
 }
-
-if (playerScore == computerScore) {
-    console.log('draw game!');
-} else if (playerScore > computerScore) {
-    console.log(`player wins with ${playerScore} point/points!`);
-} else (`computer wins with ${computerScore} point/points!`)
+rr_button = () => {
+  rr_btn.innerText = 'RESTART';
+  rr_game.appendChild(rr_btn);
+  rr_btn.addEventListener('click', () => {
+    window.location.reload();
+  });
+};

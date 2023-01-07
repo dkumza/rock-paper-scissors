@@ -4,8 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/script.js"></script>
-    <title>Document</title>
+    <script src="/script.js" defer></script>
+    <title>GAME: Rock-Paper-Scissors</title>
   </head>
-  <body></body>
+  <body>
+    <h1>This is Rock Paper Scissors game</h1>
+    <p>Who first reaches 5 points wins!</p>
+
+    <!-- how many rounds are played -->
+    <div id="round-sc">
+      <p id="round">Rounds played:</p>
+      <p id="round-no">0</p>
+    </div>
+
+    <!-- container of player score counter -->
+    <div id="score-cont">
+      <div id="player-cont">
+        <p id="player-sc1">Player score:</p>
+        <p id="player-sc2">0</p>
+      </div>
+
+      <!-- container of pc score counter -->
+      <div id="computer-cont">
+        <p id="computer-sc1">Computer score:</p>
+        <p id="computer-sc2">0</p>
+      </div>
+    </div>
+
+    <!-- anounces who wins (after who firs reaches 5 points (player or pc)) -->
+    <div id="win"></div>
+    <div id="toogle-cont">
+      <p>Please choose your "tool" to start game!</p>
+      <!-- container of buttons -->
+      <div id="btn-cont">
+        <button id="rock">ROCK</button>
+        <button id="paper">PAPER</button>
+        <button id="scissors">SCISSORS</button>
+      </div>
+
+      <!-- <button onClick="window.location.reload();">Refresh Page</button> -->
+    </div>
+
+    <!-- button appears after 5 points, to reset game -->
+    <div id="rr-game"></div>
+  </body>
 </html>
