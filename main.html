@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="/style.css" />
     <title>GAME: Rock-Paper-Scissors</title>
   </head>
   <body>
-    <h1>This is Rock Paper Scissors game</h1>
-    <p>Who first reaches 5 points wins!</p>
-
-    <!-- how many rounds are played -->
-    <div id="round-sc">
-      <p id="round">Rounds played:</p>
-      <p id="round-no">0</p>
+    <h1>Rock Paper Scissors game</h1>
+    <div id="a-container">
+      <p>Who first reaches 5 points wins!</p>
     </div>
 
+    <!-- how many rounds are played -->
+
     <!-- container of player score counter -->
-    <div id="score-cont">
+    <div id="info-cont">
+      <div id="round-sc">
+        <p id="round">Rounds played:</p>
+        <p id="round-no">0</p>
+      </div>
       <div id="player-cont">
         <p id="player-sc1">Player score:</p>
         <p id="player-sc2">0</p>
@@ -31,20 +34,20 @@
       </div>
     </div>
 
-    <!-- anounces who wins (after who firs reaches 5 points (player or pc)) -->
-    <div id="win"></div>
     <div id="toogle-cont">
-      <p>Please choose your "tool" to start game!</p>
+      <p class="p-toogle">Please choose your "tool" to start game:</p>
       <!-- container of buttons -->
       <div id="btn-cont">
-        <button id="rock">ROCK</button>
-        <button id="paper">PAPER</button>
-        <button id="scissors">SCISSORS</button>
+        <button class="btn" id="rock">ROCK</button>
+        <button class="btn" id="paper">PAPER</button>
+        <button class="btn" id="scissors">SCISSORS</button>
       </div>
 
       <!-- <button onClick="window.location.reload();">Refresh Page</button> -->
     </div>
 
+    <!-- anounces who wins (after who firs reaches 5 points (player or pc)) -->
+    <div id="win"></div>
     <!-- button appears after 5 points, to reset game -->
     <div id="rr-game"></div>
   </body>

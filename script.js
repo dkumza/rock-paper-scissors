@@ -31,13 +31,17 @@ function playRound(playerChoice, computerChoice) {
   round++;
   r_Score.innerHTML = round;
   if (playerChoice == computerChoice) {
+    alert('DRAW: Computer tooked same "tool" as you did');
   } else if (playerChoice == 'rock' && computerChoice == 'scissors') {
+    alert(`Yours: ${playerChoice} wins vs Computer: ${computerChoice}`);
     playerScore += 1;
     p_Score.innerHTML = playerScore;
   } else if (playerChoice == 'paper' && computerChoice == 'rock') {
+    alert(`Yours: ${playerChoice} wins vs Computer: ${computerChoice}`);
     playerScore += 1;
     p_Score.innerHTML = playerScore;
   } else {
+    alert(`Computer with: ${computerChoice} wins vs yours: ${playerChoice}`);
     computerScore += 1;
     c_Score.innerHTML = computerScore;
   }
