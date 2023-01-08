@@ -6,49 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/script.js" defer></script>
     <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/mutant-academy-bb"
+      rel="stylesheet"
+    />
+
     <title>GAME: Rock-Paper-Scissors</title>
   </head>
   <body>
-    <h1>Rock Paper Scissors game</h1>
-    <div id="a-container">
-      <p>Who first reaches 5 points wins!</p>
-    </div>
-
-    <!-- how many rounds are played -->
-
-    <!-- container of player score counter -->
-    <div id="info-cont">
-      <div id="round-sc">
-        <p id="round">Rounds played:</p>
-        <p id="round-no">0</p>
+    <!-- gameboard container -->
+    <div id="game-cont">
+      <!-- rounds played container -->
+      <div id="round-cont">
+        <p class="round-pl">ROUNDS PLAYED:</p>
+        <p class="round-no">0</p>
       </div>
-      <div id="player-cont">
-        <p id="player-sc1">Player score:</p>
-        <p id="player-sc2">0</p>
+      <!-- gameplay information container -->
+
+      <div id="game-info">
+        <!-- player container -->
+        <div id="player-cont">
+          <div class="score-cont">
+            <p class="player">"YOURS"</p>
+            <!-- player score container -->
+            <div class="score-c">
+              <p class="score-txt">SCORE:</p>
+              <p id="player-score" class="score-no">0</p>
+            </div>
+          </div>
+          <!-- player chooses -->
+          <div class="chooses-info">
+            <p class="chooses-txt">YOU CHOSE:</p>
+            <p id="player-choose" class="choose-info">appears on play</p>
+          </div>
+        </div>
+        <!-- VS sign -->
+        <p class="vs">VS</p>
+        <!-- pc info container -->
+        <div id="pc-cont">
+          <div class="score-cont">
+            <p class="player">"COMPUTER"</p>
+            <!-- pc score container -->
+            <div class="score-c">
+              <p class="score-txt">SCORE:</p>
+              <p id="pc-score" class="score-no">0</p>
+            </div>
+          </div>
+          <!-- pc chooses -->
+          <div class="chooses-info">
+            <p class="chooses-txt">PC CHOSE:</p>
+            <p id="pc-choose" class="choose-info">appears on play</p>
+          </div>
+        </div>
       </div>
 
-      <!-- container of pc score counter -->
-      <div id="computer-cont">
-        <p id="computer-sc1">Computer score:</p>
-        <p id="computer-sc2">0</p>
-      </div>
-    </div>
-
-    <div id="toogle-cont">
-      <p class="p-toogle">Please choose your "tool" to start game:</p>
-      <!-- container of buttons -->
       <div id="btn-cont">
-        <button class="btn" id="rock">ROCK</button>
-        <button class="btn" id="paper">PAPER</button>
-        <button class="btn" id="scissors">SCISSORS</button>
+        <div id="btn-play">
+          <button class="btn-1" id="rock">ROCK</button>
+          <button class="btn-1" id="paper">PAPER</button>
+          <button class="btn-1" id="scissors">SCISSORS</button>
+        </div>
+        <button class="btn-1" id="restart">RESTART</button>
       </div>
 
-      <!-- <button onClick="window.location.reload();">Refresh Page</button> -->
+      <!-- history log -->
+      <div id="history-cont">
+        <div id="history-info">
+          <p id="h-title">HISTORY:</p>
+        </div>
+        <div id="h-log"><li class="txt">appears on play</li></div>
+      </div>
     </div>
-
-    <!-- anounces who wins (after who firs reaches 5 points (player or pc)) -->
-    <div id="win"></div>
-    <!-- button appears after 5 points, to reset game -->
-    <div id="rr-game"></div>
   </body>
 </html>

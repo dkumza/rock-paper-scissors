@@ -1,8 +1,15 @@
+
+
+
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
 *, *::before, *::after {
     box-sizing: border-box;
+    /* font-family: 'Mutant Academy BB', sans-serif; */
+    /* font-family: 'Mutant Academy DC BB', sans-serif;
+    font-size: 30px; */
   }
   /*
     2. Remove default margin
@@ -51,59 +58,79 @@
     isolation: isolate;
   }
 
-  body {
-    border: 1px solid rebeccapurple;
-    padding-top: 5%;
-    background-color: aliceblue;
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-  }
 
-  #a-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+#game-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  #toogle-cont {
-display: flex;
-flex-direction: column;
-align-items: center;
-  }
+#round-cont {
+  display: flex;
+  padding: 20px;
+}
 
-  #round-sc, #player-cont, #computer-cont {
-    display: flex;
-  }
+#game-info {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding-bottom: 20px;
+}
 
-  #info-cont {
-    padding: 20px;
-  }
+#player-cont, #pc-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  #round, #round-no {
-    padding-bottom: 20px;
-  }
+.score-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
 
-  .p-toogle {
-    padding-bottom: 10px;
-  }
-  #btn-cont {
-    padding-right: 10px;
-    display: flex;
-  }
-  .btn {
-    width: 100px;
-    margin-left: 10px;
-    transition: all 0.6s;
-  }
+.score-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .btn:hover {
-    box-shadow: 0px 5px 20px rgba(184, 182, 181, 0.4);
-    transform: translateY(-0.2px);
-    font-weight: 600;
-    border-radius: 6px;
-  }
+.vs {
+  margin: 40px;
+}
 
-  
+.chooses-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#restart {
+  margin:20px ;
+}
+.btn-1 {
+  min-width: 100px;
+  max-width: 100px;
+}
+
+#history-cont {
+  border: 2px solid purple;
+  min-height: 80px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
