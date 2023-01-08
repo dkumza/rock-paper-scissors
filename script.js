@@ -3,15 +3,18 @@ let playerScore = 0;
 let computerChoice;
 let round = 0;
 let playValues = ['rock', 'paper', 'scissors'];
-const btn = document.querySelectorAll('button');
-const r_Score = document.querySelector('#round-no');
-const p_Score = document.querySelector('#player-sc2');
-const c_Score = document.querySelector('#computer-sc2');
-const r_content = document.querySelector('#win');
-const toogle_cont = document.querySelector('#toogle-cont');
-const rr_game = document.querySelector('#rr-game');
+const btn = document.querySelectorAll('.btn-1');
+const r_Score = document.querySelector('.round-no');
+const p_Score = document.querySelector('#player-score');
+const c_Score = document.querySelector('#pc-score');
+const p_chose = document.querySelector('#player-choose');
+const pc_chose = document.querySelector('#pc-choose');
+// const r_content = document.querySelector('#win');
+const toogle_cont = document.querySelector('#btn-play');
+const rr_game = document.querySelector('#restart');
 const para1 = document.createElement('p1');
-const rr_btn = document.createElement('button');
+
+// const rr_btn = document.createElement('button');
 
 // RANDOM VALUE OF "COMPUTER" TO START GAME
 function getComputerChoice() {
@@ -24,6 +27,8 @@ btn.forEach((button) => {
     let playerChoice = button.id;
     getComputerChoice();
     playRound(playerChoice, computerChoice);
+    p_chose.innerHTML = playerChoice.toUpperCase();
+    pc_chose.innerHTML = computerChoice.toUpperCase();
   });
 });
 
@@ -50,20 +55,15 @@ function playRound(playerChoice, computerChoice) {
     toogle_cont.style.display = 'none';
     // creates <p> with message with greatings
     para1.textContent = 'YOU WIN!';
-    r_content.appendChild(para1);
-    rr_button();
+    // r_content.appendChild(para1);
   } else if (computerScore == 5) {
     toogle_cont.style.display = 'none';
     // creates <p> with message with greatings
     para1.textContent = 'COMPUTER WINS!';
-    r_content.appendChild(para1);
-    rr_button();
+    // r_content.appendChild(para1);
   }
 }
-rr_button = () => {
-  rr_btn.innerText = 'RESTART';
-  rr_game.appendChild(rr_btn);
-  rr_btn.addEventListener('click', () => {
-    window.location.reload();
-  });
-};
+
+rr_game.addEventListener('click', () => {
+  window.location.reload();
+});

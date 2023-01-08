@@ -117,10 +117,15 @@
   align-items: center;
 }
 
+#btn-play {}
 #restart {
-  margin:20px ;
+  margin-bottom: 20px;
 }
+
 .btn-1 {
+  margin-bottom: 20px;
+}
+.btn-1, .btn-2 {
   min-width: 100px;
   max-width: 100px;
 }
