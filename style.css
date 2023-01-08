@@ -1,12 +1,13 @@
-
-
-
-
 /*
   1. Use a more-intuitive box-sizing model.
 */
 *, *::before, *::after {
     box-sizing: border-box;
+    font-family: 'College', sans-serif;
+    font-size: large;
+    /* font-family: 'College Condensed', sans-serif; */
+    /* font-family: 'College Semi-condensed', sans-serif; */
+
     /* font-family: 'Mutant Academy BB', sans-serif; */
     /* font-family: 'Mutant Academy DC BB', sans-serif;
     font-size: 30px; */
@@ -31,6 +32,8 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    /* background-color: #ECEFF4; */
+
   }
   /*
     6. Improve media defaults
@@ -60,20 +63,21 @@
 
 
 #game-cont {
+  background-color: #ECEFF4;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 #round-cont {
   display: flex;
-  padding: 20px;
+  padding: 10px;
 }
 
 #game-info {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   padding-bottom: 20px;
 }
@@ -83,6 +87,30 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#player-cont {
+  background-color: #A3BE8C;
+  min-width: 160px;
+  padding: 10px;
+  border-bottom: 2px solid #A3BE8C;
+}
+
+#player-cont:hover {
+  border-bottom:2px solid #5E81AC;
+
+}
+
+#pc-cont {
+  background-color: #D08770;
+  min-width: 160px;
+  padding: 10px;
+  border-bottom: 2px solid #D08770;
+}
+
+#pc-cont:hover {
+  border-bottom: 2px solid #5E81AC
+  ;
 }
 
 .score-cont {
@@ -100,7 +128,8 @@
 }
 
 .vs {
-  margin: 40px;
+  font-size: 48px;
+  margin: 0 10px;
 }
 
 .chooses-info {
@@ -115,27 +144,52 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 80px;
 }
 
-#btn-play {}
 #restart {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .btn-1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .btn-1, .btn-2 {
   min-width: 100px;
   max-width: 100px;
 }
 
+
 #history-cont {
-  border: 2px solid purple;
-  min-height: 80px;
-  min-width: 180px;
+  border: 1px solid black;
+}
+
+#history-list {
+  overflow: auto;
+  background-color: #ECEFF4;
+  min-height: 140px;
+  min-width: 340px;
+  max-height: 140px;
+  max-width: 340px;
+
+}
+
+#history-info {
+  position: sticky;
+  background-color: #5E81AC;
+  color: #EBCB8B;
+  display: flex;
+  justify-content: center;
+}
+
+#history-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
+  align-items: flex-start;
+  padding: 10px;
+}
+
+li {
+  font-size: 16px;
+
 }
