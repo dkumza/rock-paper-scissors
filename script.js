@@ -11,6 +11,21 @@ const p_chose = document.querySelector('#player-choose');
 const pc_chose = document.querySelector('#pc-choose');
 const toogle_cont = document.querySelector('#btn-play');
 const rr_game = document.querySelector('#restart');
+const toogle_game_info = document.querySelector('#game-info');
+
+function createPlayerWins() {
+  const para = document.createElement('p');
+  para.innerText = 'Player WINS!';
+  para.style.cssText = `font-size: 48px`;
+  document.getElementById('winner').appendChild(para);
+}
+
+function createPcWins() {
+  const para = document.createElement('p');
+  para.innerText = 'Computer WINS...';
+  para.style.cssText = `font-size: 48px`;
+  document.getElementById('winner').appendChild(para);
+}
 
 function draw_game() {
   const n_list = document.createElement('li');
@@ -72,17 +87,16 @@ function playRound(playerChoice, computerChoice) {
   if (playerChoice == computerChoice) {
     draw_game();
   } else if (playerChoice == 'rock' && computerChoice == 'scissors') {
-    // alert(`Yours: ${playerChoice} wins vs Computer: ${computerChoice}`);
     player_round(playerChoice, computerChoice);
   } else if (playerChoice == 'paper' && computerChoice == 'rock') {
-    // alert(`Yours: ${playerChoice} wins vs Computer: ${computerChoice}`);
     player_round(playerChoice, computerChoice);
   } else {
-    // alert(`Computer with: ${computerChoice} wins vs yours: ${playerChoice}`);
     pc_round(playerChoice, computerChoice);
   }
 
   function player_wins() {
+    toogle_cont.style.display = 'none';
+    toogle_game_info.style.display = 'none';
     const n_list = document.createElement('li');
     const n_list_txt = document.createTextNode(`YOU WIN!`);
     n_list.appendChild(n_list_txt);
@@ -91,6 +105,8 @@ function playRound(playerChoice, computerChoice) {
   }
 
   function pc_wins() {
+    toogle_cont.style.display = 'none';
+    toogle_game_info.style.display = 'none';
     const n_list = document.createElement('li');
     const n_list_txt = document.createTextNode(`COMPUTER WINS...`);
     n_list.appendChild(n_list_txt);
@@ -99,15 +115,12 @@ function playRound(playerChoice, computerChoice) {
   }
 
   if (playerScore == 5) {
-    toogle_cont.style.display = 'none';
-    // creates <p> with message with greatings
     player_wins();
+    createPlayerWins();
     // r_content.appendChild(para1);
   } else if (computerScore == 5) {
-    toogle_cont.style.display = 'none';
-    // creates <p> with message with greatings
     pc_wins();
-    // r_content.appendChild(para1);
+    createPcWins();
   }
 }
 
