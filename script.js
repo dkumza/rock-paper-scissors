@@ -35,7 +35,7 @@ function draw_game() {
   list.insertBefore(n_list, list.children[0]);
   document.querySelector('#game-cont').style.cssText = `
   background-color: rgba(235, 203, 139, 0.3);
-  list-style: none;`;
+  `;
 }
 
 function player_round(playerChoice, computerChoice) {
@@ -50,7 +50,7 @@ function player_round(playerChoice, computerChoice) {
   p_Score.innerHTML = playerScore;
   document.querySelector('#game-cont').style.cssText = `
   background-color: rgba(163, 190, 140, 0.3);
-  list-style: none;`;
+  `;
 }
 
 function pc_round(playerChoice, computerChoice) {
@@ -65,7 +65,7 @@ function pc_round(playerChoice, computerChoice) {
   c_Score.innerHTML = computerScore;
   document.querySelector('#game-cont').style.cssText = `
   background-color: rgba(208, 135, 112, 0.3);
-  list-style: none;`;
+  `;
 }
 
 // RANDOM VALUE OF "COMPUTER" TO START GAME
