@@ -35,6 +35,7 @@ function draw_game() {
   list.insertBefore(n_list, list.children[0]);
   document.querySelector('#game-cont').style.cssText = `
   background-color: rgba(235, 203, 139, 0.3);
+list-style: none;
   `;
 }
 
