@@ -64,7 +64,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 30px;
+  height: 100vh;
+  /* padding-bottom: 30px; */
   
 
 }
@@ -72,7 +73,8 @@
 #round-cont {
   display: flex;
   /* padding-top: 20px; */
-  padding: 20px;
+  /* padding: 20px; */
+  padding-bottom: 15px
 }
 
 #game-info {
@@ -143,7 +145,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 80px;
+  /* min-height: 80px; */
 }
 
 #restart {
