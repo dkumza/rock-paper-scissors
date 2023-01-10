@@ -26,7 +26,7 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: #ECEFF4;
+    /* background-color: #ECEFF4; */
     /* padding-bottom: 30px; */
     /* margin-bottom: 30px; */
 
@@ -59,20 +59,20 @@
 
 
 #game-cont {
-  /* border: 2px solid red; */
   background-color: #ECEFF4;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   padding-bottom: 30px;
+  
+
 }
 
 #round-cont {
   display: flex;
   /* padding-top: 20px; */
-  padding: 10px;
+  padding: 20px;
 }
 
 #game-info {
@@ -90,7 +90,7 @@
 
 #player-cont {
   background-color: #A3BE8C;
-  /* min-width: 10px; */
+  min-width: 160px;
   padding: 10px;
   border-bottom: 2px solid #A3BE8C;
 }
@@ -102,7 +102,7 @@
 
 #pc-cont {
   background-color: #D08770;
-  /* min-width: 160px; */
+  min-width: 160px;
   padding: 10px;
   border-bottom: 2px solid #D08770;
 }
@@ -143,7 +143,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* min-height: 80px; */
+  min-height: 80px;
 }
 
 #restart {
@@ -185,12 +185,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 10px;
+  padding-left: 15px;
 }
+
+
 
 li {
   font-size: 16px;
-  /* list-style: none; */
-  padding-left: 15px;
+  list-style: none;
 
 }
